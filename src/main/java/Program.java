@@ -74,6 +74,11 @@ import java.util.ArrayList;
             db.addStudios(fp.getFilmProducer("Майкл Хёрст"));
             db.addStudios(fp.getFilmProducer("Кристофер Нолан"));
 
+            db.countries.add(new Country(1, "Япония"));
+            db.countries.add(new Country(1, "Франция"));
+            db.countries.add(new Country(1, "Италия"));
+            db.countries.add(new Country(1, "Канада"));
+
             return db;
         }
     }
@@ -82,6 +87,7 @@ import java.util.ArrayList;
         ArrayList<Cinema> films = new ArrayList<>();
         ArrayList<Studio> studios = new ArrayList<>();
         ArrayList<Genre> genres = new ArrayList<>();
+        ArrayList<Country> countries = new ArrayList<>();
 
         public void addStudios(Studio producer) {
             studios.add(producer);
@@ -136,6 +142,10 @@ import java.util.ArrayList;
     class Country {
         int id;
         String name;
+        public Country(int id, String name) {
+            this.id = id;
+            this.name = name;
+        }
     }
 
     class Actor {
